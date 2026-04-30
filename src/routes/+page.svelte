@@ -46,7 +46,7 @@
     </div>
     <div
       class="media-placeholder"
-      data-label="Cat"
+      data-label="Running Live Sound"
       role="img"
       aria-label="Sean doing Live Sound"
     >
@@ -111,7 +111,7 @@
       <h2>Ready to book?</h2>
       <p>
         Tell us about your venue, schedule, and technical needs. We will reply
-        quickly with our availability.
+        quickly with our availability in roughly 1-2 business days.
       </p>
     </div>
     <a class="btn btn-primary" href="/book">Start booking</a>

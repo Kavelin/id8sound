@@ -6,7 +6,7 @@
     --ink: #1b1d22;
     --muted: #281f30;
     --surface: #ffffff;
-    --surface-alt: #f0e7dc;
+    --surface-alt: #ddf0dc;
     --accent: #a5e6ba;
     --accent-deep: #360568;
     --accent-cool: #2ec4b6;
@@ -440,6 +440,7 @@ p {
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     padding: 2rem;
+    margin:2rem;
     display: grid;
     gap: 1.25rem;
     box-shadow: var(--shadow);
