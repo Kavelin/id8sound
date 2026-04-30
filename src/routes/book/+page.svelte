@@ -1,0 +1,124 @@
+<script lang="ts">
+	import { enhance } from "$app/forms";
+
+	const { data } = $props();
+	let submitting = $state(false);
+
+	const handleEnhance = () => {
+		submitting = true;
+
+		return async ({ update }) => {
+			try {
+				await update();
+			} finally {
+				submitting = false;
+			}
+		};
+	};
+</script>
+
+<svelte:head>
+	<title>Booking | ID8 Sound</title>
+	<meta
+		name="description"
+		content="Book ID8 Sound for your next event. Share your event details and we will reply with availability."
+	/>
+</svelte:head>
+
+<section class="page-hero">
+	<div class="content">
+		<p class="eyebrow">Booking</p>
+		<h1>Tell us about your event.</h1>
+		<p>
+			Share the essentials and we will respond with availability, a clear quote,
+			and a prep checklist tailored to your venue.
+		</p>
+	</div>
+</section>
+
+<section class="section">
+	<div class="content split">
+		<div class="booking-info">
+			<h2>What to include</h2>
+			<p>
+				The more detail you share, the faster we can confirm a plan. If you are
+				still sorting logistics, just send what you know.
+			</p>
+			<ul class="bullets">
+				<li>Date, venue location, and load-in window</li>
+				<li>Estimated set length or number of artists</li>
+				<li>Recording needs or deliverable preferences</li>
+			</ul>
+			<div class="booking-note">
+				<h3>Prefer email?</h3>
+				<p>
+					Send a message to <a href="mailto:id8nsp@gmail.com">id8nsp@gmail.com</a>
+					and we will follow up quickly.
+				</p>
+			</div>
+		</div>
+
+		<form method="POST" class="form-card" use:enhance={handleEnhance}>
+			{#if data?.form?.success}
+				<div class="form-status success" role="status">
+					{data.form.message}
+				</div>
+			{:else if data?.form?.error}
+				<div class="form-status error" role="status">
+					{data.form.error}
+				</div>
+			{/if}
+
+			<div class="form-field">
+				<label for="name">Full name</label>
+				<input
+					id="name"
+					name="name"
+					type="text"
+					autocomplete="name"
+					required
+					aria-invalid={data?.form?.errors?.name ? "true" : undefined}
+					value={data?.form?.fields?.name ?? ""}
+				/>
+				{#if data?.form?.errors?.name}
+					<p class="field-error">{data.form.errors.name}</p>
+				{/if}
+			</div>
+
+			<div class="form-field">
+				<label for="email">Email address</label>
+				<input
+					id="email"
+					name="email"
+					type="email"
+					autocomplete="email"
+					required
+					aria-invalid={data?.form?.errors?.email ? "true" : undefined}
+					value={data?.form?.fields?.email ?? ""}
+				/>
+				{#if data?.form?.errors?.email}
+					<p class="field-error">{data.form.errors.email}</p>
+				{/if}
+			</div>
+
+			<div class="form-field">
+				<label for="message">Event details</label>
+				<textarea
+					id="message"
+					name="message"
+					rows="6"
+					required
+					aria-invalid={data?.form?.errors?.message ? "true" : undefined}
+				>{data?.form?.fields?.message ?? ""}</textarea>
+				{#if data?.form?.errors?.message}
+					<p class="field-error">{data.form.errors.message}</p>
+				{/if}
+			</div>
+
+			<button class="btn btn-primary" type="submit" disabled={submitting}>
+				{submitting ? "Sending..." : "Send booking request"}
+			</button>
+			<p class="form-note">We reply within 1-2 business days.</p>
+		</form>
+	</div>
+</section>
