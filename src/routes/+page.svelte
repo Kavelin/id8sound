@@ -14,7 +14,7 @@
 </svelte:head>
 
 <section class="hero">
-  <video src={Speakers} autoplay muted></video>
+  <!--<video src={Speakers} autoplay muted></video>-->
   <div class="content hero-banner">
     <div class="hero-logo">
       <img src={id8logo} alt="ID8 Sound logo" />
