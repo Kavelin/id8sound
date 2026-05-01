@@ -2,6 +2,7 @@
   import { enhance } from "$app/forms";
   import type { SubmitFunction } from "@sveltejs/kit";
   import type { ActionData } from "./$types";
+  import "$lib/styles/book.css";
 
   let { form }: { form: ActionData | null } = $props();
   let submitting = $state(false);

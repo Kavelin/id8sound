@@ -1,0 +1,19 @@
+.about-intro {
+  padding: 0;
+}
+
+.about-intro .content {
+  animation: rise-in 0.7s ease both;
+}
+
+.about-name {
+  margin-bottom: 0.75rem;
+}
+
+.about-closing {
+  padding: 0;
+}
+
+.about-closing .content {
+  animation: rise-in 0.7s ease both;
+}

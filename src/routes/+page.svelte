@@ -3,6 +3,7 @@
   import SeanLiveSound from "$lib/assets/SeanLiveSound.jpg";
   import AbletonRecording from "$lib/assets/AbletonRecording.png";
   import Speakers from "$lib/assets/Speakers.webm";
+  import "$lib/styles/home.css";
 </script>
 
 <svelte:head>
@@ -14,7 +15,7 @@
 </svelte:head>
 
 <section class="hero">
-  <!--<video src={Speakers} autoplay muted></video>-->
+  <video src={Speakers} autoplay muted playsinline></video>
   <div class="content hero-banner">
     <div class="hero-logo">
       <img src={id8logo} alt="ID8 Sound logo" />

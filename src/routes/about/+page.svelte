@@ -1,5 +1,6 @@
 <script lang="ts">
   import LiveSoundEvent from "$lib/assets/LiveSoundEvent.jpg";
+  import "$lib/styles/about.css";
 </script>
 
 <svelte:head>

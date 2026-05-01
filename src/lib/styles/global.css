@@ -34,7 +34,7 @@ body {
   color: var(--ink);
   min-height: 100vh;
   line-height: 1.6;
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 @keyframes rise-in {
@@ -147,6 +147,7 @@ main {
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
 }
+
 .nav-cta {
   position: relative;
   overflow: hidden;
@@ -158,12 +159,13 @@ main {
   top: 0;
   left: -50%;
   width: 40px;
-  height: 100%;background: linear-gradient(
-  120deg,
-  transparent,
-  rgba(255,255,255,0.6),
-  transparent
-);
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
   transform: skewX(40deg);
   animation: shine 5s infinite;
 }
@@ -219,94 +221,6 @@ p {
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 1rem;
-}
-
-.hero {
-  background: var(--accent-deep);
-  color: var(--accent);
-  padding: clamp(3rem, 6vw, 5rem) 0;
-}
-
-.hero video {
-    position:absolute;
-    width:100vw;
-    left:0;
-    bottom:0;
-    filter:sepia();
-}
-
-.hero-banner {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: clamp(2rem, 5vw, 4rem);
-}
-
-.hero-logo {
-  width: clamp(140px, 20vw, 220px);
-  aspect-ratio: 1 / 1;
-}
-
-.hero-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  text-align: left;
-}
-
-.hero-title {
-  font-family: "Garamond", "Times New Roman", serif;
-  font-size: clamp(6.4rem, 8vw, 8.5rem);
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  margin: 0 0 0.8rem;
-}
-
-.hero-tagline {
-  margin: 0 0 0.35rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  line-height: 1.15;
-  font-size: clamp(2.4rem, 2vw, 4.2rem);
-  display: grid;
-  gap: 0.2rem;
-}
-
-.hero-tagline span {
-  display: block;
-}
-
-.hero-services {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 0.95rem;
-}
-
-.hero-logo,
-.hero-text,
-.page-hero .content,
-.form-card,
-.card {
-  animation: rise-in 0.7s ease both;
-}
-
-.hero-text {
-  animation-delay: 0.1s;
-}
-
-.card:nth-child(2) {
-  animation-delay: 0.08s;
-}
-
-.card:nth-child(3) {
-  animation-delay: 0.16s;
 }
 
 .section {
@@ -368,6 +282,7 @@ p {
 .media-placeholder.tall {
   min-height: 340px;
 }
+
 .media-placeholder img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
@@ -449,114 +364,15 @@ p {
   color: var(--accent-deep);
 }
 
-.booking-info h2 {
-  margin-bottom: 0.75rem;
-}
-
-.booking-note {
-  margin-top: 2rem;
-  padding: 1.4rem;
-  border-radius: var(--radius-md);
-  background: var(--surface-alt);
-  border: 1px solid var(--line);
-}
-
-.form-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  margin: 2rem;
-  display: grid;
-  gap: 1.25rem;
-  box-shadow: var(--shadow);
-}
-
-.form-field label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
-
-.form-field input,
-.form-field textarea {
-  width: 100%;
-  border: 1px solid #d8cfc3;
-  border-radius: 12px;
-  padding: 0.75rem 0.9rem;
-  font-size: 1rem;
-  font-family: "Manrope", "Segoe UI", sans-serif;
-  background: #ffffff;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-  outline: 2px solid rgba(46, 196, 182, 0.3);
-  border-color: var(--accent-cool);
-  box-shadow: 0 0 0 3px rgba(46, 196, 182, 0.2);
-}
-
-.field-error {
-  margin: 0.35rem 0 0;
-  color: #8d3b2f;
-  font-size: 0.85rem;
-}
-
-.form-status {
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  font-weight: 600;
-}
-
-.form-status.success {
-  background: #e1f4ee;
-  color: #11634d;
-  border: 1px solid #bfe7d9;
-}
-
-.form-status.error {
-  background: #fde8e1;
-  color: #8d3b2f;
-  border: 1px solid #f5c8bb;
-}
-
-.form-note {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin: 0;
-}
-
 @media (max-width: 960px) {
   .split,
   .card-grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-banner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-text {
-    align-items: center;
-    text-align: center;
-  }
-
   .cta {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .hero {
-    padding: 4rem 0 3.5rem;
-  }
-
-  .media-placeholder {
-    order: -1;
   }
 }
 
@@ -566,21 +382,9 @@ p {
     align-items: flex-start;
   }
 
-
-  video {
-    display:none;
-  }
   .nav-links {
     flex-wrap: wrap;
     gap: 0.5rem;
-  }
-
-  .hero-logo {
-    width: clamp(130px, 40vw, 190px);
-  }
-
-  .hero-services {
-    letter-spacing: 0.16em;
   }
 }
 
