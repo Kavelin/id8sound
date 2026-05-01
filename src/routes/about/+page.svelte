@@ -12,8 +12,7 @@
 
 <section class="page-hero">
   <div class="content">
-    <p class="eyebrow">About</p>
-    <h1>We are two engineers who care about how your event actually sounds.</h1>
+    <p class="eyebrow">About Us</p>
 
     <div class="split">
       <div>
@@ -22,7 +21,7 @@
           I am an experienced sound engineer with over 3 years of live sound
           experience. I have taught theater sound at Westfield High School and
           Stone Middle School and have run sound for theatrical, rock, jazz, and
-          other events. I am currently the SU Rock Band sound engineer and head
+          other events. I am currently the Shenandoah University Rock Band sound engineer and head
           of sound for Triune Entertainment’s production of Tick, Tick… Boom!
         </p>
       </div>
@@ -33,7 +32,8 @@
           I love all things sound and music, whether it be trying to produce the
           next hypersmash generational hit of the century, listening to the
           lonely voice of a saxophone wailing in the corner of a street, or
-          tweaking levels in a live event.
+          tweaking levels in a live event. I have experience in composing game
+          soundtracks, making sound effects, producing music, as well as mixing and mastering.
         </p>
       </div>
     </div>
