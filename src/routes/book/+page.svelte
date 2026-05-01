@@ -1,10 +1,12 @@
 <script lang="ts">
   import { enhance } from "$app/forms";
+  import type { SubmitFunction } from "@sveltejs/kit";
+  import type { ActionData } from "./$types";
 
-  const { data } = $props();
+  let { form }: { form: ActionData | null } = $props();
   let submitting = $state(false);
 
-  const handleEnhance = () => {
+  const handleEnhance: SubmitFunction = () => {
     submitting = true;
 
     return async ({ update }) => {
@@ -50,13 +52,13 @@
     </div>
 
     <form method="POST" class="form-card" use:enhance={handleEnhance}>
-      {#if data?.form?.success}
+      {#if form?.success}
         <div class="form-status success" role="status">
-          {data.form.message}
+          {form.message}
         </div>
-      {:else if data?.form?.error}
+      {:else if form?.error}
         <div class="form-status error" role="status">
-          {data.form.error}
+          {form.error}
         </div>
       {/if}
 
@@ -68,11 +70,11 @@
           type="text"
           autocomplete="name"
           required
-          aria-invalid={data?.form?.errors?.name ? "true" : undefined}
-          value={data?.form?.fields?.name ?? ""}
+          aria-invalid={form?.errors?.name ? "true" : undefined}
+          value={form?.fields?.name ?? ""}
         />
-        {#if data?.form?.errors?.name}
-          <p class="field-error">{data.form.errors.name}</p>
+        {#if form?.errors?.name}
+          <p class="field-error">{form.errors.name}</p>
         {/if}
       </div>
 
@@ -84,11 +86,11 @@
           type="email"
           autocomplete="email"
           required
-          aria-invalid={data?.form?.errors?.email ? "true" : undefined}
-          value={data?.form?.fields?.email ?? ""}
+          aria-invalid={form?.errors?.email ? "true" : undefined}
+          value={form?.fields?.email ?? ""}
         />
-        {#if data?.form?.errors?.email}
-          <p class="field-error">{data.form.errors.email}</p>
+        {#if form?.errors?.email}
+          <p class="field-error">{form.errors.email}</p>
         {/if}
       </div>
 
@@ -99,11 +101,11 @@
           name="message"
           rows="6"
           required
-          aria-invalid={data?.form?.errors?.message ? "true" : undefined}
-          >{data?.form?.fields?.message ?? ""}</textarea
+          aria-invalid={form?.errors?.message ? "true" : undefined}
+          >{form?.fields?.message ?? ""}</textarea
         >
-        {#if data?.form?.errors?.message}
-          <p class="field-error">{data.form.errors.message}</p>
+        {#if form?.errors?.message}
+          <p class="field-error">{form.errors.message}</p>
         {/if}
       </div>
 

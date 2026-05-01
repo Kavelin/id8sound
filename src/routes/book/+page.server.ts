@@ -36,12 +36,16 @@ export const actions = {
     const smtpHost = env.SMTP_HOST;
     const smtpUser = env.SMTP_USER;
     const smtpPass = env.SMTP_PASS;
-    const smtpPort = env.SMTP_PORT ? Number(env.SMTP_PORT) : 587;
-    const smtpSecure = env.SMTP_SECURE === "true";
+    const smtpPort = Number(env.SMTP_PORT);
+    const smtpSecure = (env.SMTP_SECURE ?? env.EMAIL_SECURE ?? env.MAIL_SECURE)
+      ? (env.SMTP_SECURE ?? env.EMAIL_SECURE ?? env.MAIL_SECURE) === "true"
+      : smtpPort === 465;
+    const bookingRecipient = env.BOOKING_TO_EMAIL;
 
-    if (!smtpHost || !smtpUser || !smtpPass) {
+    if (!smtpUser || !smtpPass) {
       return fail(500, {
-        error: "Email service is not configured. Please try again later.",
+        error:
+          "Email service is not configured. Please try again later..",
         fields
       });
     }
@@ -59,7 +63,7 @@ export const actions = {
     try {
       await transporter.sendMail({
         from: `"ID8 Sound Booking" <${smtpUser}>`,
-        to: "id8nsp@gmail.com",
+        to: bookingRecipient,
         replyTo: email,
         subject: `Booking request from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`

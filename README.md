@@ -40,3 +40,19 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Booking Form Email Setup
+
+The booking page sends form submissions via SMTP.
+
+1. Copy `.env.example` to `.env`.
+2. Set at least `SMTP_USER` and `SMTP_PASS`.
+3. Optional: set `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, and `BOOKING_TO_EMAIL`.
+
+For Gmail, use an App Password and keep:
+
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+```
