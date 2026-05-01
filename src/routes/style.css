@@ -566,6 +566,10 @@ p {
     align-items: flex-start;
   }
 
+
+  video {
+    display:none;
+  }
   .nav-links {
     flex-wrap: wrap;
     gap: 0.5rem;
