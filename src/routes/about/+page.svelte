@@ -53,11 +53,11 @@
     </div>
     <div
       class="media-placeholder"
-      data-label="Live Sound Event in April"
+      data-label="Jagan Stand Up Comedy Event, April 25"
       role="img"
-      aria-label="Live Sound Event in April"
+      aria-label="Jagan Stand Up Comedy Event, April 25"
     >
-      <img src={LiveSoundEvent} alt="Live Sound Event" />
+      <img src={LiveSoundEvent} alt="Jagan Stand Up Comedy Event at April 25" />
     </div>
   </div>
 </section>

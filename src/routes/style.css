@@ -34,6 +34,7 @@ body {
   color: var(--ink);
   min-height: 100vh;
   line-height: 1.6;
+  overflow-x:hidden;
 }
 
 @keyframes rise-in {
@@ -157,8 +158,12 @@ main {
   top: 0;
   left: -50%;
   width: 40px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.4);
+  height: 100%;background: linear-gradient(
+  120deg,
+  transparent,
+  rgba(255,255,255,0.6),
+  transparent
+);
   transform: skewX(40deg);
   animation: shine 5s infinite;
 }
@@ -220,6 +225,14 @@ p {
   background: var(--accent-deep);
   color: var(--accent);
   padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.hero video {
+    position:absolute;
+    width:100vw;
+    left:0;
+    bottom:0;
+    filter:sepia();
 }
 
 .hero-banner {
