@@ -25,7 +25,7 @@
     <nav class="nav-links" aria-label="Primary">
       <a href="/">Home</a>
       <a href="/about">About</a>
-      <a class="nav-cta" href="/book">Booking</a>
+      <a class="shine" href="/book">Booking</a>
     </nav>
   </div>
 </header>

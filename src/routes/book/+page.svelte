@@ -110,7 +110,7 @@
         {/if}
       </div>
 
-      <button class="btn btn-primary" type="submit" disabled={submitting}>
+      <button class="btn btn-primary shine" type="submit" disabled={submitting}>
         {submitting ? "Sending..." : "Send booking request"}
       </button> 
       <p class="form-note">We reply within 1-2 business days.</p>

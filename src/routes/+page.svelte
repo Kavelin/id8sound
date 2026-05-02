@@ -15,6 +15,9 @@
 </svelte:head>
 
 <section class="hero">
+
+  
+
   <video src={Speakers} autoplay muted playsinline></video>
   <div class="content hero-banner">
     <div class="hero-logo">

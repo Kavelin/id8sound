@@ -8,14 +8,12 @@
 
 .hero video {
   position: absolute;
-  width: 100vw; 
+  width: 100vw;
   left: 0;
   bottom: -30%;
-  filter: sepia(1) hue-rotate(
-218deg) drop-shadow(2px 20px 8px rgba(0,0,0,0.2));
+  filter: none;
   pointer-events: none;
   object-fit: cover;
-  
 }
 
 .hero-banner {
@@ -139,6 +137,10 @@
 
   .media-placeholder {
     order: -1;
+  }
+
+  video {
+    display: none;
   }
 }
 

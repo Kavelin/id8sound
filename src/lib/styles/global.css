@@ -6,12 +6,12 @@
   --ink: #1b1d22;
   --muted: #281f30;
   --surface: #ffffff;
-  --surface-alt: #ddf0dc;
+  --surface-alt: #d8f7d6;
   --accent: #a5e6ba;
   --accent-deep: #360568;
   --accent-cool: #2ec4b6;
   --line: #e3d9cc;
-  --shadow: 0 3px 5px #a5e6ba88;
+  --shadow: 0 3px 5px #a5e6ba33;
   --radius-lg: 28px;
   --radius-md: 16px;
   --radius-sm: 10px;
@@ -94,9 +94,8 @@ main {
   position: sticky;
   top: 0;
   z-index: 120;
-  background: var(--muted);
+  background: var(--accent-deep);
   color: #f8f3ea;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
 }
 
@@ -148,12 +147,12 @@ main {
   color: #ffffff;
 }
 
-.nav-cta {
+.shine {
   position: relative;
   overflow: hidden;
 }
 
-.nav-cta::before {
+.shine::before {
   content: "";
   position: absolute;
   top: 0;
@@ -167,7 +166,7 @@ main {
     transparent
   );
   transform: skewX(40deg);
-  animation: shine 5s infinite;
+  animation:shine 5s infinite;
 }
 
 @keyframes shine {
@@ -356,8 +355,7 @@ p {
 
 .page-hero {
   padding: 4.5rem 0 3rem;
-  background: linear-gradient(135deg, #fef6ea, #f4e7d8);
-  border-bottom: 1px solid var(--line);
+  background: var(--surface-alt);
 }
 
 .page-hero .eyebrow {
