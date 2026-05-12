@@ -21,9 +21,22 @@
 </script>
 
 <svelte:head>
-  <title>Booking | ID8 Sound</title>
+  <title>Book an Event | ID8 Sound</title>
   <meta
     name="description"
+    content="Book ID8 Sound for your next event. Share your event details and we will reply with availability."
+  />
+  <link rel="canonical" href="https://www.id8sound.com/book" />
+  <meta property="og:title" content="Book an Event | ID8 Sound" />
+  <meta
+    property="og:description"
+    content="Book ID8 Sound for your next event. Share your event details and we will reply with availability."
+  />
+  <meta property="og:url" content="https://www.id8sound.com/book" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="Book an Event | ID8 Sound" />
+  <meta
+    name="twitter:description"
     content="Book ID8 Sound for your next event. Share your event details and we will reply with availability."
   />
 </svelte:head>
@@ -44,8 +57,8 @@
       <div class="booking-note" style="order:3">
         <h3>Prefer email?</h3>
         <p>
-          Send a message to <a href="mailto:id8nsp@gmail.com"
-            >id8nsp@gmail.com</a
+          Send a message to <a href="mailto:booking@id8sound.com"
+            >booking@id8sound.com</a
           >
           and we will follow up quickly.
         </p>

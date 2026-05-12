@@ -7,10 +7,23 @@
 </script>
 
 <svelte:head>
-  <title>ID8 Sound</title>
+  <title>ID8 Sound | Live Sound for DMV Events</title>
   <meta
     name="description"
-    content="Professional Live Sound At Half The Price. Reliable crews, clean mixes, and fair pricing."
+    content="Professional live sound at half the price. Reliable crews, clean mixes, and fair pricing for events in the DMV."
+  />
+  <link rel="canonical" href="https://www.id8sound.com/" />
+  <meta property="og:title" content="ID8 Sound | Live Sound for DMV Events" />
+  <meta
+    property="og:description"
+    content="Professional live sound at half the price. Reliable crews, clean mixes, and fair pricing for events in the DMV."
+  />
+  <meta property="og:url" content="https://www.id8sound.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="ID8 Sound | Live Sound for DMV Events" />
+  <meta
+    name="twitter:description"
+    content="Professional live sound at half the price. Reliable crews, clean mixes, and fair pricing for events in the DMV."
   />
 </svelte:head>
 
@@ -56,7 +69,7 @@
       role="img"
       aria-label="Sean doing Live Sound"
     >
-      <img src={SeanLiveSound} alt="" />
+      <img src={SeanLiveSound} alt="Sean running live sound at an event" />
     </div>
   </div>
 </section>

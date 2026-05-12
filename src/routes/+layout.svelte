@@ -1,17 +1,22 @@
 <script lang="ts">
   import "$lib/styles/global.css";
-  import favicon from '$lib/assets/favicon.svg';
+  import favicon from "$lib/assets/favicon.svg";
+  import id8logo from "$lib/assets/id8logo.png";
+
+  const siteUrl = "https://www.id8sound.com";
+  const ogImage = `${siteUrl}${id8logo}`;
 
   let { children } = $props();
 </script>
 
 <svelte:head>
-  <title>ID8 Sound</title>
-  <meta
-    name="description"
-    content="ID8 Sound provides professional live sound engineering and recording for events of every size."
-  />
-  <link rel="shortcut icon" href={favicon}>
+  <meta name="robots" content="index, follow" />
+  <meta property="og:site_name" content="ID8 Sound" />
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content={ogImage} />
+  <link rel="icon" href={favicon} />
+  <link rel="shortcut icon" href={favicon} />
 </svelte:head>
 
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -36,9 +41,9 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <p><!--©--> 2026 ID8 Sound. Professional Live Sound</p>
+    <p><!--©--> 2026 ID8 Sound LLC. All rights reserved.</p>
     <div class="footer-links">
-      <a href="mailto:id8nsp@gmail.com">id8nsp@gmail.com</a>
+      <a href="mailto:booking@id8sound.com">booking@id8sound.com</a>
       <span>Available for events in the DMV area</span>
     </div>
   </div>

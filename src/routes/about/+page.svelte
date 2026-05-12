@@ -9,6 +9,19 @@
     name="description"
     content="Meet ID8 Sound. Two engineers, careful prep, and reliable live sound for every event."
   />
+  <link rel="canonical" href="https://www.id8sound.com/about" />
+  <meta property="og:title" content="About | ID8 Sound" />
+  <meta
+    property="og:description"
+    content="Meet ID8 Sound. Two engineers, careful prep, and reliable live sound for every event."
+  />
+  <meta property="og:url" content="https://www.id8sound.com/about" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:title" content="About | ID8 Sound" />
+  <meta
+    name="twitter:description"
+    content="Meet ID8 Sound. Two engineers, careful prep, and reliable live sound for every event."
+  />
 </svelte:head>
 
 <section class="page-hero">
