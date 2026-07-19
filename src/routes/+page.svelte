@@ -129,8 +129,10 @@
     <div>
       <h2>Ready to book?</h2>
       <p>
+        Our base price: <b>$250 + $50 an hour*</b><br><br>
         Tell us about your venue, schedule, and technical needs. We will reply
-        quickly with our availability in roughly 1-2 business days.
+        quickly with our availability in roughly 1-2 business days. <br><br>
+        <small>*price might vary based on venue and needs </small>
       </p>
     </div>
     <a class="btn btn-primary" href="/book">Start booking</a>

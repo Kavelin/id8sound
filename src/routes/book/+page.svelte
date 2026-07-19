@@ -45,9 +45,13 @@
     <div class="booking-info">
       <h2>Book an event</h2>
       <p>
-        The more detail you share, the faster we can confirm our availability. If you are
-        still sorting logistics, just send as much as you have and update us
-        when you know more.
+        Our base price: <b>$250 + $50 an hour*</b><br /><br />
+
+        The more detail you share, the faster we can confirm our availability.
+        If you are still sorting logistics, just send as much as you have and
+        update us when you know more.
+        <br><br>
+        <small>*price might vary based on venue and needs</small>
       </p>
       <ul class="bullets">
         <li>Date, venue location, and a rough time estimate</li>
@@ -125,7 +129,7 @@
 
       <button class="btn btn-primary shine" type="submit" disabled={submitting}>
         {submitting ? "Sending..." : "Send booking request"}
-      </button> 
+      </button>
       <p class="form-note">We reply within 1-2 business days.</p>
     </form>
   </div>

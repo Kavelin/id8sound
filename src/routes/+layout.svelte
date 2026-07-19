@@ -4,7 +4,7 @@
   import id8logo from "$lib/assets/id8logo.png";
 
   const siteUrl = "https://www.id8sound.com";
-  const ogImage = `${siteUrl}${id8logo}`;
+  const ogImage = `${siteUrl}/${id8logo}`;
 
   let { children } = $props();
 </script>
